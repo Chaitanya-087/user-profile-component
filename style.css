@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+}
+
+main {
+    display: grid;
+    place-content: center;
+    width: 100vw;
+    max-width: 90%;
+    min-height: inherit;
+    margin: auto;
+}
+
+.pattern-top {
+    background-image: url('./images/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    position: fixed;
+    top: -25%;
+    left: -25%;
+    transform: rotate(90deg);
+    width: 100vw;
+    height: 100vh;
+}
+
+.pattern-bottom {
+    background-image: url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: -50%;
+    right: -50%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 999;
+    overflow: hidden;
+    max-width: 350px;
+
+}
+
+.user-image-container {
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    z-index: 999;
+    bottom: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.user {
+    margin-top: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.user .name {
+    color: hsl(229, 23%, 23%);
+}
+
+.user .age{
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+}
+.user .place {
+    font-size: 14px;
+    color: hsl(227, 10%, 46%);
+}
+
+.user-stats-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-block: 1.5rem;
+    border-top: 1px solid hsla(227, 10%, 46%,0.25);
+}
+
+.user-stat {
+    text-align: center;
+}
+
+.stat-value {
+    color: hsl(229, 23%, 23%);
+}
+
+.stat-type {
+    color: hsl(227, 10%, 46%);
+    font-size: 12px;
+}
